@@ -1,0 +1,109 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-08-01/subscriptionDeploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "variables": {
+     "mspCompanyName": "[guid('iLand Technology')]",
+     "mspRegistrationName": "[guid('Azure Managed Services MSP')]",
+     "mspAssignmentName": "[guid('Azure Managed Services MSP')]",
+     "mspOfferDescription": "Nossa equipe tem experiência para ajudá-lo a gerenciar sua Infraestrutura do Azure. O que nos diferencia é o nosso amplo conhecimento de ambiente hibridos e foco nas melhores práticas de cibersegurança. Nós da iLand Technology, entendemos que a cibersegurança vai além de apenas ferramentas e práticas isoladas. Isso requer uma abordagem holística, abrangendo o gerenciamento robusto de sistemas de todo o seu ambiente de tecnologia, desde os serviços de nuvem até os dispositivos do usuário final.",
+     "managedByTenantId": "a73e8be5-3e32-4b1d-9d1c-0eba6cf37694",
+     "authorizations": [
+      {
+       "principalId": "687d36da-d20a-424e-8dae-598b9ccab17b",
+       "roleDefinitionId": "acdd72a7-3385-48ef-bd42-f606fba81ae7",
+       "principalIdDisplayName": "MSP Tier 1 Support"
+      },
+      {
+       "principalId": "13e7056d-1f6e-4760-b557-f85a8acfa931",
+       "roleDefinitionId": "acdd72a7-3385-48ef-bd42-f606fba81ae7",
+       "principalIdDisplayName": "MSP Tier 2 Support"
+      },
+      {
+       "principalId": "13e7056d-1f6e-4760-b557-f85a8acfa931",
+       "roleDefinitionId": "91c1777a-f3dc-4fae-b103-61d183457e46",
+       "principalIdDisplayName": "MSP Tier 2 Support"
+      },
+      {
+       "principalId": "f270390a-3d89-4ec5-aafc-5720410c0f43",
+       "roleDefinitionId": "acdd72a7-3385-48ef-bd42-f606fba81ae7",
+       "principalIdDisplayName": "MSP Tier 3 Support"
+      },
+      {
+       "principalId": "f270390a-3d89-4ec5-aafc-5720410c0f43",
+       "roleDefinitionId": "91c1777a-f3dc-4fae-b103-61d183457e46",
+       "principalIdDisplayName": "MSP Tier 3 Support"
+      }
+     ],
+     "eligibleAuthorizations": [
+      {
+       "justInTimeAccessPolicy": {
+        "multiFactorAuthProvider": "Azure",
+        "maximumActivationDuration": "PT8H",
+        "managedByTenantApprovers": [
+         {
+          "principalId": "523ccecc-4b4f-4a8a-9b8c-290c16a5f357",
+          "principalIdDisplayName": " JIT Approver"
+         }
+        ]
+       },
+       "principalId": "13e7056d-1f6e-4760-b557-f85a8acfa931",
+       "principalIdDisplayName": "MSP Tier 2 Support",
+       "roleDefinitionId": "b24988ac-6180-42a0-ab88-20f7382dd24c"
+      },
+      {
+       "justInTimeAccessPolicy": {
+        "multiFactorAuthProvider": "Azure",
+        "maximumActivationDuration": "PT8H",
+        "managedByTenantApprovers": [
+         {
+          "principalId": "523ccecc-4b4f-4a8a-9b8c-290c16a5f357",
+          "principalIdDisplayName": " JIT Approver"
+         }
+        ]
+       },
+       "principalId": "f270390a-3d89-4ec5-aafc-5720410c0f43",
+       "principalIdDisplayName": "MSP Tier 3 Support",
+       "roleDefinitionId": "b24988ac-6180-42a0-ab88-20f7382dd24c"
+      }
+     ]
+    },
+    "resources": [
+     {
+      "type": "Microsoft.ManagedServices/registrationDefinitions",
+      "apiVersion": "2020-02-01-preview",
+      "name": "[variables('mspRegistrationName')]",
+      "properties": {
+       "registrationDefinitionName": "[variables('mspAssignmentName')]",
+       "description": "[variables('mspOfferDescription')]",
+       "managedByTenantId": "[variables('managedByTenantId')]",
+       "authorizations": "[variables('authorizations')]",
+       "eligibleAuthorizations": "[variables('eligibleAuthorizations')]"
+      }
+     },
+     {
+      "type": "Microsoft.ManagedServices/registrationAssignments",
+      "apiVersion": "2020-02-01-preview",
+      "name": "[variables('mspAssignmentName')]",
+      "dependsOn": [
+       "[resourceId('Microsoft.ManagedServices/registrationDefinitions/', variables('mspRegistrationName'))]"
+      ],
+      "properties": {
+       "registrationDefinitionId": "[resourceId('Microsoft.ManagedServices/registrationDefinitions/', variables('mspRegistrationName'))]"
+      }
+     }
+    ],
+    "outputs": {
+     "mspOfferName": {
+      "type": "string",
+      "value": "[concat('Managed by', ' ', variables('mspCompanyName'))]"
+     },
+     "authorizations": {
+      "type": "array",
+      "value": "[variables('authorizations')]"
+     },
+     "eligibleAuthorizations": {
+      "type": "array",
+      "value": "[variables('eligibleAuthorizations')]"
+     }
+    }
+   }
