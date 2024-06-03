@@ -1,4 +1,4 @@
-# Faz o deployment da **iLand Technology** como MSP da subscrição
+# Vínculo da **iLand Technology** como MSP da subscrição
 
 Este código faz o deployment da **iLand Technology** como MSP para a subscrição e região selecionada dando às devidas delegações de acesso às equipes de suporte durante o processamento autorização.
 
