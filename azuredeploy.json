@@ -1,10 +1,18 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2019-08-01/subscriptionDeploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
+    "parameters": {
+     "mspOfferName": {
+      "type": "string",
+      "metadata": {
+       "description": "Specify a unique name for your offer"
+      },
+      "defaultValue": "Azure Managed Services MSP"
+     }
+    },
     "variables": {
-     "mspCompanyName": "[guid('iLand Technology')]",
-     "mspRegistrationName": "[guid('Azure Managed Services MSP')]",
-     "mspAssignmentName": "[guid('Azure Managed Services MSP')]",
+     "mspRegistrationName": "[guid(parameters('mspOfferName'))]",
+     "mspAssignmentName": "[guid(parameters('mspOfferName'))]",
      "mspOfferDescription": "Nossa equipe tem experiência para ajudá-lo a gerenciar sua Infraestrutura no Azure. O que nos diferencia é o nosso amplo conhecimento de ambiente hibridos e foco nas melhores práticas de cibersegurança. Nós da iLand Technology, entendemos que a cibersegurança vai além de apenas ferramentas e práticas isoladas. Isso requer uma abordagem holística, abrangendo o gerenciamento robusto de sistemas de todo o seu ambiente de tecnologia, desde os serviços de nuvem até os dispositivos do usuário final.",
      "managedByTenantId": "a73e8be5-3e32-4b1d-9d1c-0eba6cf37694",
      "authorizations": [
@@ -16,11 +24,6 @@
       {
        "principalId": "687d36da-d20a-424e-8dae-598b9ccab17b",
        "roleDefinitionId": "00c29273-979b-4161-815c-10b084fb9324",
-       "principalIdDisplayName": "MSP Tier 1 Support"
-      },
-      {
-       "principalId": "687d36da-d20a-424e-8dae-598b9ccab17b",
-       "roleDefinitionId": "e5e2a7ff-d759-4cd2-bb51-3152d37e2eb1",
        "principalIdDisplayName": "MSP Tier 1 Support"
       },
       {
@@ -110,7 +113,7 @@
     "outputs": {
      "mspOfferName": {
       "type": "string",
-      "value": "[concat('Managed by', ' ', variables('mspCompanyName'))]"
+      "value": "[concat('Managed by', ' ', variables('mspAssignmentName'))]"
      },
      "authorizations": {
       "type": "array",
