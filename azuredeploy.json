@@ -5,7 +5,7 @@
      "mspCompanyName": "[guid('iLand Technology')]",
      "mspRegistrationName": "[guid('Azure Managed Services MSP')]",
      "mspAssignmentName": "[guid('Azure Managed Services MSP')]",
-     "mspOfferDescription": "Nossa equipe tem experiência para ajudá-lo a gerenciar sua Infraestrutura do Azure. O que nos diferencia é o nosso amplo conhecimento de ambiente hibridos e foco nas melhores práticas de cibersegurança. Nós da iLand Technology, entendemos que a cibersegurança vai além de apenas ferramentas e práticas isoladas. Isso requer uma abordagem holística, abrangendo o gerenciamento robusto de sistemas de todo o seu ambiente de tecnologia, desde os serviços de nuvem até os dispositivos do usuário final.",
+     "mspOfferDescription": "Nossa equipe tem experiência para ajudá-lo a gerenciar sua Infraestrutura no Azure. O que nos diferencia é o nosso amplo conhecimento de ambiente hibridos e foco nas melhores práticas de cibersegurança. Nós da iLand Technology, entendemos que a cibersegurança vai além de apenas ferramentas e práticas isoladas. Isso requer uma abordagem holística, abrangendo o gerenciamento robusto de sistemas de todo o seu ambiente de tecnologia, desde os serviços de nuvem até os dispositivos do usuário final.",
      "managedByTenantId": "a73e8be5-3e32-4b1d-9d1c-0eba6cf37694",
      "authorizations": [
       {
@@ -14,8 +14,28 @@
        "principalIdDisplayName": "MSP Tier 1 Support"
       },
       {
+       "principalId": "687d36da-d20a-424e-8dae-598b9ccab17b",
+       "roleDefinitionId": "00c29273-979b-4161-815c-10b084fb9324",
+       "principalIdDisplayName": "MSP Tier 1 Support"
+      },
+      {
+       "principalId": "687d36da-d20a-424e-8dae-598b9ccab17b",
+       "roleDefinitionId": "e5e2a7ff-d759-4cd2-bb51-3152d37e2eb1",
+       "principalIdDisplayName": "MSP Tier 1 Support"
+      },
+      {
+       "principalId": "687d36da-d20a-424e-8dae-598b9ccab17b",
+       "roleDefinitionId": "9980e02c-c2be-4d73-94e8-173b1dc7cf3c",
+       "principalIdDisplayName": "MSP Tier 1 Support"
+      },
+      {
        "principalId": "13e7056d-1f6e-4760-b557-f85a8acfa931",
        "roleDefinitionId": "acdd72a7-3385-48ef-bd42-f606fba81ae7",
+       "principalIdDisplayName": "MSP Tier 2 Support"
+      },
+      {
+       "principalId": "13e7056d-1f6e-4760-b557-f85a8acfa931",
+       "roleDefinitionId": "f58310d9-a9f6-439a-9e8d-f62e7b41a168",
        "principalIdDisplayName": "MSP Tier 2 Support"
       },
       {
@@ -26,6 +46,11 @@
       {
        "principalId": "f270390a-3d89-4ec5-aafc-5720410c0f43",
        "roleDefinitionId": "acdd72a7-3385-48ef-bd42-f606fba81ae7",
+       "principalIdDisplayName": "MSP Tier 3 Support"
+      },
+      {
+       "principalId": "f270390a-3d89-4ec5-aafc-5720410c0f43",
+       "roleDefinitionId": "f58310d9-a9f6-439a-9e8d-f62e7b41a168",
        "principalIdDisplayName": "MSP Tier 3 Support"
       },
       {
