@@ -35,22 +35,12 @@
       },
       {
        "principalId": "13e7056d-1f6e-4760-b557-f85a8acfa931",
-       "roleDefinitionId": "f58310d9-a9f6-439a-9e8d-f62e7b41a168",
-       "principalIdDisplayName": "MSP Tier 2 Support"
-      },
-      {
-       "principalId": "13e7056d-1f6e-4760-b557-f85a8acfa931",
        "roleDefinitionId": "91c1777a-f3dc-4fae-b103-61d183457e46",
        "principalIdDisplayName": "MSP Tier 2 Support"
       },
       {
        "principalId": "f270390a-3d89-4ec5-aafc-5720410c0f43",
        "roleDefinitionId": "acdd72a7-3385-48ef-bd42-f606fba81ae7",
-       "principalIdDisplayName": "MSP Tier 3 Support"
-      },
-      {
-       "principalId": "f270390a-3d89-4ec5-aafc-5720410c0f43",
-       "roleDefinitionId": "f58310d9-a9f6-439a-9e8d-f62e7b41a168",
        "principalIdDisplayName": "MSP Tier 3 Support"
       },
       {
