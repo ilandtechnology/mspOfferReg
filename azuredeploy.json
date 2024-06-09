@@ -5,7 +5,7 @@
      "mspOfferName": "iLand Technology Managed Services",
      "mspRegistrationName": "[guid(variables('mspOfferName'))]",
      "mspAssignmentName": "[guid(variables('mspOfferName'))]",
-     "mspOfferDescription": "Nossa equipe tem experiência para ajudá-lo a gerenciar sua Infraestrutura no Azure. O que nos diferencia é o nosso amplo conhecimento de ambiente hibridos e foco nas melhores práticas de cibersegurança. Nós da iLand Technology, entendemos que a cibersegurança vai além de apenas ferramentas e práticas isoladas. Isso requer uma abordagem holística, abrangendo o gerenciamento robusto de sistemas de todo o seu ambiente de tecnologia, desde os serviços de nuvem até os dispositivos do usuário final.",
+     "mspOfferDescription": "Nossa equipe tem experiência para ajudá-lo a gerenciar sua Infraestrutura no Azure. O que nos diferencia é o nosso amplo conhecimento de ambiente híbridos com foco nas melhores práticas de cibersegurança. Nós da iLand Technology, entendemos que a cibersegurança vai além de apenas ferramentas e práticas isoladas. Ou seja, isso requer uma abordagem holística, abrangendo o gerenciamento robusto de todo o seu ambiente de tecnologia, desde os serviços de nuvem até os dispositivos do usuário final.",
      "managedByTenantId": "a73e8be5-3e32-4b1d-9d1c-0eba6cf37694",
      "authorizations": [
       {
