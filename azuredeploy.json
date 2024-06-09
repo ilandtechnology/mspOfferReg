@@ -1,18 +1,10 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2019-08-01/subscriptionDeploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
-    "parameters": {
-     "mspOfferName": {
-      "type": "string",
-      "metadata": {
-       "description": "Specify a unique name for your offer"
-      },
-      "defaultValue": "Azure Managed Services MSP"
-     }
-    },
     "variables": {
-     "mspRegistrationName": "[guid(parameters('mspOfferName'))]",
-     "mspAssignmentName": "[guid(parameters('mspOfferName'))]",
+     "mspOfferName": "iLand Technology Managed Services",
+     "mspRegistrationName": "[guid(variables('mspOfferName'))]",
+     "mspAssignmentName": "[guid(variables('mspOfferName'))]",
      "mspOfferDescription": "Nossa equipe tem experiência para ajudá-lo a gerenciar sua Infraestrutura no Azure. O que nos diferencia é o nosso amplo conhecimento de ambiente hibridos e foco nas melhores práticas de cibersegurança. Nós da iLand Technology, entendemos que a cibersegurança vai além de apenas ferramentas e práticas isoladas. Isso requer uma abordagem holística, abrangendo o gerenciamento robusto de sistemas de todo o seu ambiente de tecnologia, desde os serviços de nuvem até os dispositivos do usuário final.",
      "managedByTenantId": "a73e8be5-3e32-4b1d-9d1c-0eba6cf37694",
      "authorizations": [
@@ -91,7 +83,7 @@
       "apiVersion": "2020-02-01-preview",
       "name": "[variables('mspRegistrationName')]",
       "properties": {
-       "registrationDefinitionName": "[variables('mspAssignmentName')]",
+       "registrationDefinitionName": "[variables('mspOfferName')]",
        "description": "[variables('mspOfferDescription')]",
        "managedByTenantId": "[variables('managedByTenantId')]",
        "authorizations": "[variables('authorizations')]",
@@ -113,7 +105,7 @@
     "outputs": {
      "mspOfferName": {
       "type": "string",
-      "value": "[concat('Managed by', ' ', variables('mspAssignmentName'))]"
+      "value": "[concat('Managed by', ' ', variables('mspOfferName'))]"
      },
      "authorizations": {
       "type": "array",
