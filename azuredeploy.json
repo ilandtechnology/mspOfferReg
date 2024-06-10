@@ -19,11 +19,6 @@
        "principalIdDisplayName": "MSP Tier 1 Support"
       },
       {
-       "principalId": "687d36da-d20a-424e-8dae-598b9ccab17b",
-       "roleDefinitionId": "9980e02c-c2be-4d73-94e8-173b1dc7cf3c",
-       "principalIdDisplayName": "MSP Tier 1 Support"
-      },
-      {
        "principalId": "13e7056d-1f6e-4760-b557-f85a8acfa931",
        "roleDefinitionId": "acdd72a7-3385-48ef-bd42-f606fba81ae7",
        "principalIdDisplayName": "MSP Tier 2 Support"
