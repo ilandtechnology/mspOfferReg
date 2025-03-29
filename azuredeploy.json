@@ -11,6 +11,9 @@
       {
        "principalId": "687d36da-d20a-424e-8dae-598b9ccab17b",
        "roleDefinitionId": "acdd72a7-3385-48ef-bd42-f606fba81ae7",
+       "excludedRoleDefinitionIds": [
+        "fa23ad8b-c56e-40d8-ac0c-ce449e1d2c64"
+       ],
        "principalIdDisplayName": "MSP Tier 1 Support"
       },
       {
@@ -21,6 +24,9 @@
       {
        "principalId": "13e7056d-1f6e-4760-b557-f85a8acfa931",
        "roleDefinitionId": "acdd72a7-3385-48ef-bd42-f606fba81ae7",
+       "excludedRoleDefinitionIds": [
+        "fa23ad8b-c56e-40d8-ac0c-ce449e1d2c64"
+       ],
        "principalIdDisplayName": "MSP Tier 2 Support"
       },
       {
@@ -62,8 +68,7 @@
        },
        "principalId": "13e7056d-1f6e-4760-b557-f85a8acfa931",
        "principalIdDisplayName": "MSP Tier 2 Support",
-       "roleDefinitionId": "b24988ac-6180-42a0-ab88-20f7382dd24c",
-
+       "roleDefinitionId": "b24988ac-6180-42a0-ab88-20f7382dd24c"
       },
       {
        "justInTimeAccessPolicy": {
